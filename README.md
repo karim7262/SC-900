@@ -1,6 +1,4 @@
-# Exam SC-900: Microsoft Security, Compliance, and
-
-# Identity Fundamentals – Skills Measured
+# Exam SC-900: Microsoft Security, Compliance, and Identity Fundamentals – Skills Measured
 
 ## Audience Profile
 
@@ -47,9 +45,7 @@ questions on Preview features if those features are commonly used.
 ```
  describe the offerings of the service trust portal
 ```
-## Describe the capabilities of Microsoft Identity and Access Management
-
-## Solutions (25-30%)
+## Describe the capabilities of Microsoft Identity and Access Management Solutions (25-30%)
 
 **Define identity principles/concepts**
 
