@@ -2,6 +2,8 @@
 ```
 This document was created when I was preparing for this exam when it was in beta. 
 
+Exam outline detailed below are as of 31st March 2021.
+
 I have used variety of different resources for my prep,
 · [Microsoft Learn](https://docs.microsoft.com/en·au/users/bhargavp/collections/xgwgixxkp88dwd)
 · [John Savill's SC·900 Study Cram](https://youtu.be/Bz·8jM3jg·8)
