@@ -1,11 +1,12 @@
-## Notes
-
+# My Notes
+```
 This document was created when I was preparing for this exam when it was in beta. 
 
 I have used variety of different resources for my prep,
 · [Microsoft Learn](https://docs.microsoft.com/en·au/users/bhargavp/collections/xgwgixxkp88dwd)
 · [John Savill's SC·900 Study Cram](https://youtu.be/Bz·8jM3jg·8)
-
+· [RaviKiran's blog post](https://ravikirans.com/sc-900-azure-exam-study-guide/)
+```
 ## Describe the Concepts of Security, Compliance, and Identity (5·10%)
 
 **Describe security methodologies**
@@ -123,9 +124,6 @@ Protection)**
 
 ```
 · describe what Intune is
-```
-
-```
 · describe endpoint security with Intune
 · describe the endpoint security with the Microsoft Endpoint Manager admin center
 ```
