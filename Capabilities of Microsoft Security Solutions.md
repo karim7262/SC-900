@@ -795,17 +795,82 @@ The new Microsoft 365 security center is a specialized workspace designed to mee
 
 ### Describe how to use Microsoft Secure Score
 
+[Describe how to use Microsoft Secure Score - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-management-capabilities-of-microsoft-365/3-describe-how-to-use-microsoft-secure-score)
 
+Microsoft Secure Score, one of the tools in the Microsoft security center, is a representation of a company's security posture. The higher the score, the better your protection.
 
+Secure Score helps organizations:
 
+- Report on the current state of their security posture.
+- Improve their security posture by providing discoverability, visibility, guidance, and control.
+- Compare benchmarks and establish key performance indicators (KPIs).
+
+Points are given for the following actions:
+
+- Configuring recommended security features.
+- Doing security-related tasks.
+- Addressing the improvement action with a third-party application or software, or an alternate mitigation.
+
+Some improvement actions only give points when fully completed. Others give partial points if they're completed for some devices or users. If you can't, or don't want to, enact one of the improvement actions, you can choose to accept the risk or remaining risk.
+
+If you have a license for one of the supported Microsoft products, you'll see related recommendations. Secure Score will show all possible improvements for the product, whatever the license edition, subscription, or plan. You'll then see all the security best practices and improvements that can be made to your score.
+
+Your absolute security posture, represented by Secure Score, stays the same whatever licenses your organization owns for a specific product. Keep in mind that security should be balanced with usability, and not every recommendation can work for your environment.
+
+Currently Microsoft Secure Score supports recommendations for Microsoft 365 (including Exchange Online), Azure Active Directory, Microsoft Defender for Endpoint, Microsoft Defender for Identity, and Cloud App Security. New recommendations are being added to Secure Score all the time.
+
+In this diagram, you can see the Secure Score is 32.86%. It illustrates a breakdown of the score by points, and then shows the improvement areas that will boost your score. Finally, it provides an indication of how well your score compares to other similar organizations.
+
+[![Screenshot showing a Microsoft Secure Score page, with several panels highlighted: Secure Score, Breakdown of score, implementation actions, and a comparison of the score against other organizations.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-microsoft-365/media/3-secure-score-overview-inline.png)](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-microsoft-365/media/3-secure-score-overview-expanded.png#lightbox)
+
+#### Differences between the Azure and Microsoft Secure Score
+
+There's a Secure Score for both Microsoft 365 Defender and Azure Defender, but they're subtly different. Secure Score in the Azure Security Center is a measure of the security posture of your Azure subscriptions. Secure Score in the Microsoft 365 security center is a measure of the security posture of the organization across your apps, devices, and identities.
+
+Both the Azure and Microsoft Secure Score provide a list of steps you can take to improve your score. In Microsoft 365 Secure Score, these steps are called improvement actions. In the Azure Secure Score, scores are assessed for each subscription. The steps you can take to improve your score are called security recommendations and they're grouped into security controls.
+
+Use Microsoft Secure Score to understand and rapidly improve your organization’s security posture.
+
+#### Interactive guide
+
+As the Microsoft 365 admin, you need to monitor and work on the security of your organization's Microsoft 365 identities, apps, data, and devices. The following interactive click-through demonstrates how Microsoft Secure Score can help.
+
+[![Interactive guide](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-microsoft-365/media/3-interactive-guide-place-holder.png)](https://edxinteractivepage.blob.core.windows.net/edxpages/Security fundamentals/LP03M05 - Explore Microsoft Secure Score/index.html)
 
 
 
 ### Explore security reports and dashboards
 
+[Explore security reports and dashboards - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-management-capabilities-of-microsoft-365/4-explore-security-reports-dashboards)
 
+The Microsoft security center includes a **Reports** section that shows various cards covering different areas. Security analysts and administrators can track the cards as part of their day-to-day operations. On drill-down, cards provide detailed reports and, in some cases, management options.
 
+By default, cards are grouped by the following categories:
 
+- **Identities** - user accounts and credentials.
+- **Data** - email and document contents.
+- **Devices** - computers, mobile phones, and other devices.
+- **Apps** - programs and attached online services.
+
+In the example below, the cards are grouped by category. 
+
+- The first category is **Identities** where you find two cards, **Users at risk** and **Global admins**. 
+- The second category is **Data** where you find two cards, **Users with the most shared files** and **Third-party DLP policy matches**.
+
+[![Screenshot showing the Microsoft 365 security reports page.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-microsoft-365/media/4-microsoft-security-reports-inline.png)](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-microsoft-365/media/4-microsoft-security-reports-expanded.png#lightbox)
+
+You can group cards by topic, which will rearrange the cards and group them into the following areas:
+
+- **Risk** - cards that highlight entities, such as accounts and devices, that might be at risk. These cards also highlight possible sources of risk, such as new threat campaigns and privileged cloud apps.
+- **Detection trends** - cards that highlight new threat detections, anomalies, and policy violations.
+- **Configuration and health** - cards that cover the configuration and deployment of security controls, including device onboarding states to management services.
+- **Other** - all cards not categorized under other topics.
+
+In the example below, the cards are grouped by topic. The first category is **Risk**. The second category is **Detection trends**.
+
+[![Screen shot showing the Reports page within Microsoft 365 Security.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-microsoft-365/media/4-microsoft-security-reports-details-inline.png)](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-microsoft-365/media/4-microsoft-security-reports-details-expanded.png#lightbox)
+
+Use the **Reports** section to view security trends across your organization, and track the protection of your organization’s devices, apps, identities, and data.
 
 
 
@@ -813,6 +878,25 @@ The new Microsoft 365 security center is a specialized workspace designed to mee
 
 ### Describe incident capabilities
 
+[Describe incidents capabilities - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-management-capabilities-of-microsoft-365/5-describe-incidents-capabilities)
+
+Incidents are a collection of correlated alerts created when a suspicious event is found. Alerts are generated from different device, user, and mailbox entities, and can come from many different domains. These alerts are automatically aggregated by Microsoft 365 Defender. It's the grouping of these related alerts that form an incident. The incident provides a comprehensive view and context of an attack.
+
+Security personnel can use an incident to determine where an attack started, what methods were used, and to what extent the attack has progressed within the network. They can also determine the scope of the attack, and how many users, devices, and mailboxes were affected. The severity of the attack can also be determined.
+
+#### Incident management
+
+Managing incidents is critical in ensuring that threats are contained and addressed. In Microsoft 365 Defender, you can manage incidents on devices, users accounts, and mailboxes.
+
+You can manage incidents by selecting one from the Incidents queue.
+
+Incidents are automatically assigned a name based on an alert. You can edit the name of an incident, resolve it, then set its classification and determination. You can also assign the incident to yourself, and add incident tags and comments.
+
+When you investigate cases where you want to move alerts from one incident to another, you can also do so from the Alerts tab. You'll create a larger or smaller incident that includes all relevant alerts.
+
+Watch this four-minute video, which describes incidents and incident management.
+
+<iframe src="https://www.microsoft.com/en-au/videoplayer/embed/RE4J3mt?postJsllMsg=true&amp;autoCaptions=en-au" frameborder="0" allowfullscreen="true" data-linktype="external" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; outline-color: inherit; width: 640px; position: absolute; inset: 0px; height: 360px;"></iframe>
 
 
 
@@ -832,11 +916,129 @@ The new Microsoft 365 security center is a specialized workspace designed to mee
 
 
 
-
-
+Use incidents to effectively and appropriately respond to alerts across your organization’s environment.
 
 
 
 
 
 ## Endpoint security with Microsoft Intune
+
+[Describe endpoint security with Microsoft Intune - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-endpoint-security-with-microsoft-intune/)
+
+Microsoft Intune is a cloud-based service that focuses on mobile device management (MDM) and mobile application management (MAM). You control how your organization’s devices, including mobile phones, tablets, and laptops, are used. You can also configure specific policies to control applications. For example, you can prevent emails from being sent to people outside your organization.
+
+Intune also allows people in your organization to use their personal devices for school or work. On personal devices, Intune helps make sure your organization data stays protected, and can isolate it from personal data.
+
+With Intune, admins can:
+
+- Support a diverse mobile environment and manage iOS/iPadOS, Android, Windows, and macOS devices securely.
+- Set rules and configure settings on personal and organization-owned devices to access data and networks.
+- Deploy and authenticate apps for both on-premises and mobile devices.
+- Protect your company information by controlling the way users access and share information.
+- Be sure devices and apps are compliant with your security requirements.
+
+### Mobile device management (MDM)
+
+For devices that are owned by the business, organizations can maintain full control. This includes settings, features, and security. When these devices are enrolled with Intune, they'll receive rules and settings defined by Intune policies. For example, you can define password requirements.
+
+When devices are enrolled and managed in Intune, administrators can:
+
+- See the devices enrolled, and get an inventory of the ones accessing organization resources.
+- Configure devices so they meet your security and health standards. For example, you probably want to block jailbroken devices.
+- Push certificates to devices so users can easily access your Wi-Fi network, or use a VPN to connect to it.
+- See reports on users and devices to determine if they're compliant.
+- Remove organization data if a device is lost, stolen, or not used anymore.
+
+To learn more, go to: [Manage devices](https://docs.microsoft.com/en-us/mem/intune/fundamentals/what-is-intune#manage-devices).
+
+### Mobile application management (MAM)
+
+Users with personal devices might not want their phone to be under full corporate control. Mobile application management (MAM) gives admins the ability to protect corporate data at the application level. Where users just want to access apps like email or Microsoft Teams, admins can use application protection policies, without requiring the device to be enrolled in Intune, supporting bring-your-own device (BYOD) scenarios.
+
+MAM can be used with custom applications and store apps.
+
+When apps are managed in Intune, administrators can:
+
+- Add and assign mobile apps to user groups and devices, including users and devices in specific groups, and more.
+- Configure apps to start or run with specific settings enabled and update existing apps already on the device.
+- See reports on which apps are used and track their usage.
+- Do a selective wipe by removing only organization data from apps.
+
+To learn more, go to: [Manage apps](https://docs.microsoft.com/en-us/mem/intune/fundamentals/what-is-intune#manage-apps).
+
+
+
+# Describe endpoint security with Intune
+
+When admins want to configure and manage security tasks for at-risk devices, they can go to the Endpoint security node in Intune.
+
+#### Manage devices
+
+The Endpoint security node includes the *All devices* view, where you'll see a list of all devices from your Azure AD that are available in Microsoft Endpoint Manager.
+
+From this view, you can select devices to drill in for more information, such as which policies a device isn't compliant with. You can also use access from this view to remediate issues for a device, including restarting, start a scan for malware, or rotate BitLocker keys on a Windows 10 device.
+
+For more information, go to: [Manage devices with endpoint security in Microsoft Intune](https://docs.microsoft.com/en-us/mem/intune/protect/endpoint-security-manage-devices).
+
+#### Manage security baselines
+
+Intune includes [security baselines](https://docs.microsoft.com/en-us/mem/intune/protect/endpoint-security#manage-security-baselines) for Windows devices and a growing list of applications, including Microsoft Edge, Microsoft Defender for Endpoint (previously Microsoft Defender Advanced Threat Protection), and more. Security baselines are preconfigured groups of Windows settings that help admins apply recommended security.
+
+As an example, the MDM Security Baseline automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, and automatically disables basic authentication. Admins can also customize the baselines to enforce only those settings and values that are required.
+
+#### Use policies to manage device security
+
+Each [Endpoint security policy](https://docs.microsoft.com/en-us/mem/intune/protect/endpoint-security#use-policies-to-manage-device-security) focuses on aspects of device security like antivirus, disk encryption, firewalls, and areas such as endpoint detection and response and attack surface reduction, made available through integration with Microsoft Defender for Endpoint.
+
+Endpoint security policies are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods being used in your environment can configure your devices, to [avoid policy conflicts](https://docs.microsoft.com/en-us/mem/intune/protect/endpoint-security#avoid-policy-conflicts).
+
+#### Use device compliance policy
+
+Use device compliance policy to establish the conditions by which devices and users are allowed to access the corporate network and company resources. With compliance policies, admins can set the rules that devices and users must meet to be considered compliant. Rules can include OS versions, password requirements, device threat levels, and more. To learn more, go to: [Use compliance policies to set rules for devices you manage with Intune](https://docs.microsoft.com/en-us/mem/intune/protect/device-compliance-get-started).
+
+Device compliance policies are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods being used in your environment can configure your devices to [avoid policy conflicts](https://docs.microsoft.com/en-us/mem/intune/protect/endpoint-security#avoid-policy-conflicts).
+
+#### Configure conditional access
+
+Intune can be integrated with Azure AD conditional access policies to enforce compliance policies. Intune passes the results of your device compliance policies to Azure AD, which then uses conditional access policies to enforce which devices and apps can access your corporate resources.
+
+The following are two common methods of using conditional access with Intune:
+
+- Device-based conditional access, to ensure only managed and compliant devices can access network resources.
+- App-based conditional access, which uses app protection policies to manage access to network resources by users on devices that aren't managed with Intune.
+
+To learn more about using conditional access with Intune, go to: [Learn about Conditional Access and Intune.](https://docs.microsoft.com/en-us/mem/intune/protect/conditional-access)
+
+#### Integration with Microsoft Defender for Endpoint
+
+Intune can integrate with Microsoft Defender for Endpoint (formerly Microsoft Defender ATP) for a Mobile Threat Defense solution. Integration can help prevent security breaches and limit the impact of breaches within an organization.
+
+Microsoft Defender for Endpoint works with devices that run:
+
+- Android
+- iOS/iPadOS
+- Windows 10 or later
+
+By integrating Intune with Microsoft Defender for Endpoint, organizations can take advantage of Microsoft Defender for Endpoint’s Threat and Vulnerability Management (TVM), using Intune to remediate endpoint weakness identified by TVM.
+
+To learn more, go to: [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](https://docs.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection).
+
+#### Role-based access control with Microsoft Intune
+
+Role-based access control (RBAC) helps manage who has access to the organization's resources and what they do with them. By assigning roles to Intune users, admins limit what they'll see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
+
+To manage tasks in the Endpoint security node of the Microsoft Endpoint Manager admin center, an account must have RBAC permissions equal to the permissions provided by the built-in Intune role of **Endpoint Security Manager**. The Endpoint Security Manager role grants access to the Microsoft Endpoint Manager admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
+
+To learn more, go to: [Role-based access control (RBAC) with Microsoft Intune](https://docs.microsoft.com/en-us/mem/intune/fundamentals/role-based-access-control).
+
+#### Video demonstration of Microsoft Endpoint Manager capabilities
+
+In this eight-minute video, you’ll explore Endpoint Manager, and some of its capabilities.
+
+<iframe src="https://www.microsoft.com/en-au/videoplayer/embed/RE4LTIu?postJsllMsg=true&amp;autoCaptions=en-au" frameborder="0" allowfullscreen="true" data-linktype="external" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; outline-color: inherit; width: 640px; position: absolute; inset: 0px; height: 360px;"></iframe>
+
+\
+
+
+
