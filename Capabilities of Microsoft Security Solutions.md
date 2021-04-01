@@ -194,11 +194,14 @@ The function of CSPM in your organization might be spread across multiple teams,
 
 Use CSPM to improve your cloud security management by assessing the environment, and automatically alerting security staff for vulnerabilities.
 
+------
+
 
 
 ### Describe and explore Azure Security Centre
 
 [Describe and explore the Azure Security center - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-management-capabilities-of-azure/3-describe-explore-azure-security-center)
+
 
 Using Azure Security Centre gives you infrastructure level security management to protect your data. It also provides advanced threat protection for on-premises, cloud, and hybrid workloads in the cloud, whether they're in Azure or not, as well as on-premises.
 
@@ -245,11 +248,48 @@ Security Centre's threat protection automatically correlates alerts in your envi
 
 With Security Centre, organizations can get secure faster through integration with other Microsoft security solutions. Also, integration with Azure and its resources means you'll pull together a complete security story involving Azure Policy and built-in Security Centre policies across all your Azure resources. You then ensure that the whole thing is automatically applied to newly discovered resources as you create them in Azure.
 
+------
+
+
 
 
 ### Describe and explore Azure Secure Score
 
+[Describe and explore Azure Secure score - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-management-capabilities-of-azure/4-describe-explore-azure-secure-score)
 
+Security Center continually assesses your resources, subscriptions, and organization for security issues. It then aggregates all the findings into a single score so you can quickly see your current security situation: the higher the score, the lower the identified risk level.
+
+The secure score is shown in the Azure portal pages as a percentage value. The underlying values are also clearly presented:
+
+![Section of the Azure portal showing the Overall Secure Score.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-azure/media/4-overall-secuire-score.png)
+
+To increase your security and raise your score, review Security Center's recommendations page for the outstanding actions necessary. Each recommendation includes instructions to help you remediate the specific issue.
+
+
+
+#### How is the security score calculated?
+
+Every control in the recommendations list shows the potential secure score increase if you address the underlying problem. To get every possible security control point, all your resources must follow each security recommendation within the security control. For example, Security Center has multiple recommendations for how to secure your management ports. You must remediate them all to make a difference to your secure score.
+
+For example, the security control called "Apply system updates" has a maximum score of six points. You can see it in the tooltip on the potential increase value of the control:
+
+![Fragment of a screenshot showing a specific recommendation control and the percentage point increase will occur from fixing the issues.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-azure/media/4-specific-recommendations.png)
+
+The maximum score for this control, *Apply system updates*, is always 6. In this example, there are 50 resources. Divide the maximum score by 50, and the result is that every resource contributes 0.12 points.
+
+- **Potential increase** (0.12 x 8 unhealthy resources = 0.96): The remaining points available to you within the control. If you remediate all the recommendations, your score will increase by 2 percent (in this case, 0.96 points rounded up to 1 point).
+- **Current score** (0.12 x 42 healthy resources = 5.04): The current score for this control. Each control contributes to the total score. In this example, the control is contributing 5.04 points to the current secure total.
+- **Max score**: The maximum number of points you can gain by completing all recommendations within a control. The maximum score for a control indicates its relative significance. *<u>Use the max score values to triage the issues to work on first.</u>*
+
+#### Interactive guide
+
+If you’re the Azure administrator for your organization, you’ll need to be aware of the security of your Azure environment and then improve your security posture. The following interactive click-through demonstrates how you use Azure secure score.  Click on the image below to get started.
+
+[![Interactive guide](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-management-capabilities-of-azure/media/4-interactive-guide-place-holder.png)](https://edxinteractivepage.blob.core.windows.net/edxpages/Security fundamentals/LP03M02 - Use Azure secure score to improve your security posture/index.html)
+
+
+
+------
 
 
 
@@ -257,127 +297,102 @@ With Security Centre, organizations can get secure faster through integration wi
 
 Previously this was known as, **Cloud Workload Protection Platform (CWPP)**
 
+[Describe the benefit and use cases of Azure Defender - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-management-capabilities-of-azure/5-describe-benefit-use-cases-defender)
 
+- Azure Defender is a built-in tool that provides threat protection for workloads running in Azure, on-premises, and other clouds. Azure Defender is the leading Microsoft extended detection and response (XDR) solution for threat protection. 
+- Integrated with Azure Security Center, Azure Defender protects your hybrid data, cloud-native services and servers, and integrates with your existing security workflows.
+- You'll find the Azure Defender dashboard in Azure Security Center. It provides visibility and control of your organization's cloud workload protection (CWP) features across the network.
+
+
+
+##### Scope of Azure Defender
+
+Azure Defender comes with several different plans that can be enabled separately and will run simultaneously to provide a comprehensive defense for compute, data, and service layers in your environment. The Azure Defender plans you can select from are:
+
+- **Azure Defender for servers** adds threat detection and advanced defenses for your Windows and Linux machines.
+- **Azure Defender for App Service** uses the cloud scale to identify attacks targeting applications running over App Service.
+- **Azure Defender for Storage** detects potentially harmful activity on your Azure Storage accounts. Data can be protected, whether stored as blob containers, file shares, or data lakes.
+- **Azure Defender for SQL** extends Azure Security Center's data security package to secure your databases and their data wherever they're located.
+- **Azure Defender for Kubernetes** provides the best cloud-native Kubernetes security environment hardening, workload protection, and run-time protection.
+- **Azure Defender for container registries** protects all the Azure Resource Manager based registries in your subscription. Azure Defender scans all images pushed to the registry, or imported into the registry, or any images pulled within the last 30 days.
+- **Azure Defender for Key Vault** is Azure-native, advanced threat protection for Azure Key Vault, providing an extra layer of security intelligence.
+
+
+
+##### Hybrid cloud protection
+
+You can defend your Azure environment, and add Azure Defender capabilities to the hybrid cloud environment:
+
+- Protect your non-Azure servers.
+- Protect your virtual machines in other clouds (such as AWS and GCP).
+
+
+
+##### Azure Defender alerts
+
+When Azure Defender detects a threat in any area of your environment, it generates an alert. These alerts describe details of the affected resources, suggested remediation steps, and in some cases, an option to trigger a logic app in response. The alerts can also be exported into Azure Sentinel.
+
+
+
+##### Advanced protection
+
+Azure Defender uses advanced analytics for tailored recommendations as they relate to your resources. These analytics might include securing the management ports of your VMs with just-in-time access and adaptive application controls to create allow lists for what apps should and shouldn't run on your machines.
+
+
+
+##### Vulnerability assessment
+
+Azure Defender includes vulnerability scanning for your virtual machines and container registries. Review the findings from these vulnerability scanners and respond to them all from within Security Center.
+
+------
 
 
 
 ### Describe security baseline for Azure
 
+Microsoft's cybersecurity group and the Center for Internet Security (CIS), have developed best practices to help establish security baselines for the Azure platform. A baseline is the implementation of the benchmark on the individual Azure service.
+
+CIS benchmarks have been used with Azure security services and tools to make security and compliance easier for customer applications running on Azure services. 
+
+Every service comes with a baseline that's already designed to help provide security for most common-use cases. These baselines also provide a consistent experience when securing your environment.
 
 
 
+#### The Azure Security Benchmark
+
+A benchmark contains security recommendations for a specific technology, such as Azure. The recommendations are categorized by the control to which they belong. The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure.
+
+The ASB focuses on cloud-centric control areas. These controls are consistent with well-known security benchmarks, such as those described by the CIS. The areas covered include network security, identity management, posture and vulnerability management, and endpoint security.
+
+Each recommendation includes the following information:
+
+- **Azure ID**: The Azure Security Benchmark ID that corresponds to the recommendation.
+- **Recommendation**: The recommendation provides a high-level description of the control.
+- **Guidance**: The rationale for the recommendation and links to guidance on how to implement it.
+- **Responsibility**: Who is responsible for implementing the control? Possible scenarios are customer responsibility, Microsoft responsibility, or shared responsibility.
+- **Azure Security Center monitoring**: Does Azure Security Center monitor the control?
+
+All recommendations, including the ones that don't apply to this specific service, appear in the baseline to provide a complete picture of how the Azure Security Benchmark relates to each service.
+
+Security baselines are included for many Azure services, including Azure security baseline for Security Center.
+
+------
 
 ### Describe the different pricing tiers
 
+Cloud security posture management is essential for every organization. Microsoft Azure lets you decide how much you need to meet your regulatory, compliance, and corporate security needs.
 
+Security Center is offered in two modes:
 
+#### Azure Defender off
 
+Security Center without Azure Defender is enabled free of charge on all your Azure subscriptions when you visit the Azure Security Center dashboard in the Azure portal for the first time, or if enabled programmatically via API.
 
+#### Azure Defender on
 
+Enabling Azure Defender extends the free mode capabilities to workloads running in private and other public clouds, providing unified security management and threat protection across your hybrid cloud workloads.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+For more information visit [Azure Defender pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
 
 
 
@@ -387,11 +402,440 @@ Previously this was known as, **Cloud Workload Protection Platform (CWPP)**
 
 
 
+### Define the concepts of SIEM, SOAR, XDR
+
+[Define the concepts of SIEM, SOAR, XDR - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-capabilities-of-azure-sentinel/2-define-concepts-of-siem-soar-xdr)
+
+Cybercriminals will often escalate their activity in times of national or global crisis, looking to exploit the situation and find ways into your organization. Having a resilient and robust, industry-standard set of tools can help mitigate and prevent these exploits. Security incident and event management (SIEM), security orchestration automated response (SOAR), and extended detection and response (XDR) provide excellent security insights and security automation that can enhance an organization's network security perimeter.
+
+#### What is security incident and event management (SIEM)?
+
+A SIEM system is a tool that an organization uses to collect data from across the whole estate, including infrastructure, software, and resources. It does analysis, looks for correlations or anomalies, and generates alerts and incidents.
+
+#### What is security orchestration automated response (SOAR)?
+
+A SOAR system takes alerts from many sources, such as a SIEM system. The SOAR system then triggers action-driven automated workflows and processes to run security tasks that mitigate the issue.
+
+#### What is extended detection and response (XDR)?
+
+An XDR system is designed to deliver intelligent, automated, and integrated security across an organization’s domain. It helps prevent, detect, and respond to threats across identities, endpoints, applications, email, IoT, infrastructure, and cloud platforms.
+
+To provide a comprehensive security perimeter, an organization needs to use a solution that embraces or combines all of the above systems.
+
+------
+
+### Describe how Sentinel provides integrated threat protection
+
+[Describe how Sentinel provides integrated threat protection - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-capabilities-of-azure-sentinel/3-describe-sentinel-provide-integrated-threat-protection)
+
+Microsoft Azure Sentinel is a scalable, cloud-native SIEM/SOAR solution that delivers intelligent security analytics and threat intelligence across the enterprise. It provides a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+
+![Diagram showing the four aspects of Azure Sentinel: collect, detect, investigate, and respond.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-capabilities-of-azure-sentinel/media/3-four-aspects-azure-sentinel.png)
+
+This diagram shows the end-to-end functionality of Azure Sentinel.
+
+- **Collect** data at cloud scale across all users, devices, applications, and infrastructure, both on-premises and in multiple clouds.
+- **Detect** previously uncovered threats and minimize false positives using analytics and unparalleled threat intelligence.
+- **Investigate** threats with AI and hunt suspicious activities at scale, tapping into decades of cybersecurity work at Microsoft.
+- **Respond** to incidents rapidly with built-in orchestration and automation of common security tasks.
+
+Azure Sentinel helps enable end-to-end security operations. It starts with log ingestion and continues through to automated response to security alerts.
+
+
+
+#### Connect Sentinel to your data
+
+Azure Sentinel comes with many connectors for Microsoft solutions, available out of the box and providing real-time integration. Included are Microsoft 365 Defender (formerly Microsoft Threat Protection) solutions, and Microsoft 365 sources, including Office 365, Azure AD, Microsoft Defender for Identity (formerly Azure ATP), Microsoft Cloud App Security, and more.
+
+First, you must have your data ingested into Azure Sentinel, for which you need data connectors. There are data connectors that cover a wide range of scenarios and sources, including but not limited to:
+
+- syslog
+- Windows Event Logs
+- Common Event Format (CEF)
+- Trusted Automated eXchange of Indicator Information (TAXII), for threat intelligence
+- Azure
+- AWS services
+
+
+
+#### Workbooks
+
+After you connect data sources to Azure Sentinel, you can monitor the data using the Azure Sentinel integration with Azure Monitor Workbooks. You'll see a canvas for data analysis and the creation of rich visual reports within the Azure portal. Through this integration, Azure Sentinel allows you to create custom workbooks across your data. It also comes with built-in workbook templates that allow quick insights across your data as soon as you connect a data source.
+
+#### Analytics
+
+The power of Azure Sentinel comes into play here. Using built-in analytics alerts within the Azure Sentinel workspace, you’ll get notified when anything suspicious occurs. There are various types of alerts, some of which you can edit to your own needs. Other alerts are built on machine learning models that are proprietary to Microsoft.
+
+#### Manage incidents in Azure Sentinel
+
+An incident is created when an alert that you've enabled is triggered. You can do standard incident management tasks like changing status or assigning incidents to individuals for investigation in Azure Sentinel. It also has investigation functionality, so you can visually investigate incidents by mapping entities across log data along a timeline.
+
+#### Security automation and orchestration
+
+You can use Azure Sentinel to automate some of your security operations and make your security operations center (SOC) more productive. Azure Sentinel integrates with Azure Logic Apps, so you can create automated workflows, or playbooks, in response to events. This functionality could be used for incident management, enrichment, investigation, or remediation.
+
+#### Playbooks
+
+A security playbook is a collection of procedures that can help automate and orchestrate your response. It can be run manually or set to run automatically when specific alerts are triggered. Security playbooks in Azure Sentinel are based on Azure Logic Apps. You get all the power, customizability, and built-in templates of Logic Apps. Each playbook is created for the specific subscription you choose.
+
+#### Investigation
+
+Currently in preview, Azure Sentinel's deep investigation tools help you to understand the scope of a potential security threat and find the root cause. You choose an entity on the interactive graph to ask specific questions, then drill down into that entity and its connections to get to the root cause of the threat.
+
+#### Hunting
+
+Use Azure Sentinel's powerful hunting search-and-query tools, based on the MITRE framework, to hunt proactively for security threats across your organization’s data sources, before an alert is triggered. After you discover which hunting query provides high-value insights into possible attacks, you can also create custom detection rules based on your query, and surface those insights as alerts to your security incident responders.
+
+While hunting, you can bookmark interesting events, enabling you to return to them later, share them with others, and group them with other correlating events to create a compelling incident for investigation.
+
+#### Integrated threat protection
+
+Threat protection is a continuously evolving battle front. Cybercriminals look for any vulnerability they can exploit to steal, damage, or extort company data, assets, and resources. Microsoft provides a suite of tools that give extended detection and response (XDR) through Microsoft 365 Defender and Azure Defender.
+
+![Diagram showing Microsoft 365 Defender and Azure Defender.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-capabilities-of-azure-sentinel/media/3-defender-azure-defender.png)
+
+Both tools integrate smoothly with Azure Sentinel to provide a complete and thorough threat protection capability for your organization.
+
+![Diagram showing the three elements that make up the complete threat protection: Microsoft 365 and Azure Defender, and Azure Sentinel.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-security-capabilities-of-azure-sentinel/media/3-elements-threat-protection.png)
+
+#### Azure Sentinel video presentation
+
+In this nine-minute video, you’ll explore many of the key features available in Azure Sentinel, including incidents, workbooks, hunting, notebooks, analytics, and playbooks.
+
+<iframe src="https://www.microsoft.com/en-au/videoplayer/embed/RE4LHLR?postJsllMsg=true&amp;autoCaptions=en-au" frameborder="0" allowfullscreen="true" data-linktype="external" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; outline-color: inherit; width: 640px; position: absolute; inset: 0px; height: 360px;"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Understand Sentinel costs
+
+Azure Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Billing is based on the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace. There are two ways to pay for the Azure Sentinel service: Capacity Reservations and Pay-As-You-Go.
+
+- **Capacity Reservations**: With Capacity Reservations, you're billed a fixed fee based on the selected tier, enabling a predictable total cost for Azure Sentinel.
+- **Pay-As-You-Go**: With Pay-As-You-Go pricing, you're billed per gigabyte (GB) for the volume of data ingested for analysis in Azure Sentinel and stored in the Azure Monitor Log Analytics workspace.
+
+For more information on pricing and a free trial of Azure Sentinel on an Azure Monitor Log Analytics workspace, visit [Azure Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
+
+
+
+
+
 ## Protection with Microsoft 365 Defender (Formerly Microsoft Threat Protection)
 
 
 
+### Describe Microsoft 365 Defender services
+
+[Describe Microsoft 365 Defender services - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-threat-protection-with-microsoft-365-defender/2-describe-services)
+
+Microsoft 365 Defender is an enterprise defense suite that protects against sophisticated cyberattacks. With Microsoft 365 Defender, you can natively coordinate the detection, prevention, investigation, and response to threats across email, identity, and applications.
+
+This short three-minute video provides an essential overview of Microsoft 365 Defender.
+
+<iframe src="https://www.microsoft.com/en-au/videoplayer/embed/RE4IPYr?postJsllMsg=true&amp;autoCaptions=en-au" frameborder="0" allowfullscreen="true" data-linktype="external" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; outline-color: inherit; width: 640px; position: absolute; inset: 0px; height: 360px;"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft 365 Defender allows admins to assess threat signals from applications, email, and identity to determine an attack's scope and impact. It gives greater insight into how the threat occurred, and what systems have been affected. Microsoft 365 Defender can then take automated action to prevent or stop the attack.
+
+![Diagram that shows the four aspects that make up the Microsoft 365 Defender suite: identity, endpoints, apps, and email.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-threat-protection-with-microsoft-365-defender/media/2-four-aspects-microsoft-365-defender.png)
+
+Microsoft 365 Defender suite protects:
+
+- **Endpoints with Microsoft Defender for Endpoint** - Microsoft Defender for Endpoint is a unified endpoint platform for preventative protection, post-breach detection, automated investigation, and response.
+- **Email and collaboration with Microsoft Defender for Office 365** - Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools.
+- **Identities with Microsoft Defender for Identity and Azure AD Identity Protection** - Microsoft Defender for Identity uses Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
+- **Applications with Microsoft Cloud App Security** - Microsoft Cloud App Security is a comprehensive cross-SaaS solution that brings deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
+
+Use Microsoft Defender to protect your organization against sophisticated cyberattacks. It coordinates your detection, prevention, investigation, and response to threats across identities, email, and applications.
+
+
+
+### Describe Microsoft Defender for Identity
+
+Microsoft Defender for Identity, formerly Azure Advanced Threat Protection (Azure ATP), is a cloud-based security solution. 
+
+It uses your on-premises Active Directory data (called signals) to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. 
+
+Microsoft Defender for Identity covers these key areas:
+
+- Monitor and profile user behavior and activities.
+- Protect user identities and reduce the attack surface.
+- Identify suspicious activities and advanced attacks across the cyberattack kill-chain.
+
+#### Monitor and profile user behavior and activities
+
+Defender for Identity monitors and analyzes user activities and information across your network, including permissions and group membership, creating a behavioral baseline for each user. Defender for Identity then identifies anomalies with adaptive built-in intelligence. It gives insights into suspicious activities and events, revealing the advanced threats, compromised users, and insider threats facing your organization.
+
+#### Protect user identities and reduce the attack surface
+
+Defender for Identity gives invaluable insights on identity configurations and suggested security best practices. Through security reports and user profile analytics, Defender for Identity helps reduce your organizational attack surface, making it harder to compromise user credentials and advance an attack.
+
+Defender for Identity security reports, help identify users and devices that authenticate using clear-text passwords. It also provides extra insights into how to improve security posture and policies.
+
+#### Identify suspicious activities and advanced attacks across the cyberattack kill-chain
+
+Typically, attacks are launched against any accessible entity, such as a low-privileged user. Attacks then quickly move laterally until the attacker accesses valuable assets. These assets might include sensitive accounts, domain administrators, and highly sensitive data. Defender for Identity identifies these advanced threats at the source throughout the entire cyberattack kill chain:
+
+- Reconnaissance
+- Compromised credentials
+- Lateral movements
+- Domain dominance
+
+#### Investigate alerts and user activities
+
+Defender for Identity is designed to reduce general alert noise, providing only relevant, important security alerts in a simple, real-time organizational attack timeline.
+
+Use the Defender for Identity attack timeline view and the intelligence of smart analytics to stay focused on what matters. Also, you can use Defender for Identity to quickly investigate threats, and gain insights across the organization for users, devices, and network resources.
+
+Microsoft Defender for Identity protects your organization from compromised identities, advanced threats, and malicious insider actions.
+
+
+
+### Describe Microsoft Defender for Office 365
+
+[Describe Microsoft Defender for Office 365 - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-threat-protection-with-microsoft-365-defender/4-describe-defender-office)
+
+Microsoft Defender for Office 365, formerly Office 365 Advanced Threat Protection, safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools, including Microsoft Teams, SharePoint Online, OneDrive for Business, and other Office clients.
+
+Microsoft Defender for Office 365 covers these key areas:
+
+- **Threat protection policies**: Define threat protection policies to set the appropriate level of protection for your organization.
+- **Reports**: View real-time reports to monitor Microsoft Defender for Office 365 performance in your organization.
+- **Threat investigation and response capabilities**: Use leading-edge tools to investigate, understand, simulate, and prevent threats.
+- **Automated investigation and response capabilities**: Save time and effort investigating and mitigating threats.
+
+Microsoft Defender for Office 365 is available in two plans. The plan you choose influences the tools you’ll see and use. It's important to make sure you select the best plan to meet your organization's needs.
+
+#### Microsoft Defender for Office 365 Plan 1
+
+This plan offers configuration, protection, and detection tools for your Office 365 suite:
+
+- **Safe Attachments**: Checks email attachments for malicious content.
+- **Safe Links**: Links are scanned for each click. A safe link remains accessible, but malicious links are blocked.
+- **Protection for SharePoint, OneDrive, and Microsoft Teams**: Protects your organization when users collaborate and share files by identifying and blocking malicious files in team sites and document libraries.
+- **Anti-phishing protection**: Detects attempts to impersonate your users and internal or custom domains.
+- **Real-time detections**: A real-time report that allows you to identify and analyze recent threats.
+
+#### Microsoft Defender for Office 365 Plan 2
+
+This plan includes all the core features of Plan 1, and provides automation, investigation, remediation, and simulation tools to help protect your Office 365 suite:
+
+- **Threat Trackers**: Provide the latest intelligence on prevailing cybersecurity issues, and allow an organization to take countermeasures before there's an actual threat.
+- **Threat Explorer**: A real-time report that allows you to identify and analyze recent threats.
+- **Automated investigation and response (AIR)**: Includes a set of security playbooks that can be launched automatically, such as when an alert is triggered, or manually. A security playbook can start an automated investigation, provide detailed results, and recommend actions that the security team can approve or reject.
+- **Attack Simulator**: Allows you to run realistic attack scenarios in your organization to identify vulnerabilities.
+
+#### Microsoft Defender for Office 365 availability
+
+Microsoft Defender for Office 365 is included in certain subscriptions, such as Microsoft 365 E5, Office 365 E5, Office 365 A5, and Microsoft 365 Business Premium.
+
+If your subscription doesn’t include Defender for Office 365, you can purchase it as an add-on.
+
+Use Microsoft 365 Defender for Office 365 to protect your organization's collaboration tools and messages.
+
+
+
+### Describe Microsoft Defender for Endpoint
+
+[Describe Microsoft Defender for Endpoint - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-threat-protection-with-microsoft-365-defender/5-describe-defender-endpoint)
+
+Microsoft Defender for Endpoint, formerly Microsoft Defender Advanced Threat Protection, is a platform designed to help enterprise networks protect endpoints. It does so by preventing, detecting, investigating, and responding to advanced threats. Microsoft Defender for Endpoint embeds technology built into Windows 10 and MSFT cloud services.
+
+This technology includes endpoint behavioral sensors that collect and process signals from the operating system, cloud security analytics that turn signals into insights, detections and recommendations, and threat intelligence to identify attacker tools, techniques, generate alerts.
+
+![Diagram showing the seven aspects of Microsoft Defender Endpoint: Threat and Vulnerability Management, Attack surface reduction, Next-generation protection, Endpoint detection and response, automated investigation and remediation, Microsoft Threat Experts, and Centralized configuration and administration.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-threat-protection-with-microsoft-365-defender/media/5-seven-aspects-microsoft-defender.png)
+
+Microsoft Defender for Endpoint includes:
+
+- **Threat and vulnerability management**: A risk-based approach to the discovery, prioritization, and remediation of endpoint vulnerabilities and misconfigurations. It uses sensors on devices to avoid the need for agents or scans, and prioritizes vulnerabilities.
+- **Attack surface reduction**: Reduces the places where your organization is vulnerable to cyberthreats and attacks by ensuring only *allowed* apps can run, and preventing apps from accessing dangerous locations.
+- **Next generation protection**: Brings together machine learning, big data analysis, in-depth threat resistance research, and the Microsoft cloud infrastructure to protect devices in your enterprise organization.
+- **Endpoint detection and response**: Provides advanced attack detections that are near real time and actionable. Security analysts can prioritize alerts, see the full scope of a breach, and take response actions to remediate threats.
+- **Automated investigation and remediation**: The automated investigation feature uses inspection algorithms and processes used by analysts (such as playbooks) to examine alerts and take quick remediation action to resolve breaches. This process significantly reduces the volume of alerts that must be investigated individually.
+- **Microsoft Threat Experts**: A managed threat hunting service that provides Security Operation Centers (SOCs) with monitoring and analysis tools to ensure critical threats don’t get missed.
+- **Management and APIs**: Provides APIs to integrate with other solutions.
+
+Microsoft Defender for Endpoint includes Microsoft Secure Score for Devices to help you dynamically assess the security state of your enterprise network, identify unprotected systems, and take recommended actions to improve overall security. Microsoft Defender for Endpoint integrates with various components in the Microsoft Defender suite, and with other Microsoft solutions including Intune and Azure Security Center.
+
+Use Microsoft Defender for Endpoint to protect your organization's endpoints and respond to advanced threats.
+
+
+
+### Describe Microsoft Cloud App Security
+
+[Describe Microsoft Cloud App Security - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-threat-protection-with-microsoft-365-defender/6-describe-microsoft-cloud-app-security)
+
+Microsoft Cloud App Security (MCAS) is a Cloud Access Security Broker (CASB). It's a comprehensive cross-SaaS solution that operates as an intermediary between a cloud user and the cloud provider. 
+
+Microsoft Cloud App Security provides rich visibility to your cloud services, control over data travel, and sophisticated analytics to identify and combat cyberthreats across all your Microsoft and third-party cloud services. Use this service to gain visibility into Shadow IT by discovering the cloud apps being used. You can control and protect data in the apps after you sanction them to the service.
+
+#### What is a Cloud Access Security Broker?
+
+A CASB acts as a gatekeeper to broker real-time access between your enterprise users and the cloud resources they use, wherever they're located, and whatever device they're using.
+
+CASBs address security gaps in an organization’s use of cloud services. Protection is provided by many capabilities across these areas: **visibility** to detect all cloud services, **data security**, **threat protection**, and **compliance**. These capability areas represent the basis of the Cloud App Security framework described below.
+
+
+
+#### The Cloud App Security framework
+
+MCAS is built on a framework that provides the following capabilities:
+
+- **Discover and control the use of Shadow IT**: Identify the cloud apps, and IaaS and PaaS services used by your organization. Investigate usage patterns, assess the risk levels and business readiness of more than 16,000 SaaS apps against more than 80 risks.
+- **Protect your sensitive information** **anywhere in the cloud**: Understand, classify, and protect the exposure of sensitive information at rest. Use out-of-the-box policies and automated processes to apply controls in real time across all your cloud apps.
+- **Protect against cyberthreats and anomalies**: Detect unusual behavior across cloud apps to identify ransomware, compromised users, or rogue applications, analyze high-risk usage, and remediate automatically to limit risks.
+- **Assess your cloud apps' compliance**: Assess if your cloud apps meet relevant compliance requirements, including regulatory compliance and industry standards. Prevent data leaks to non-compliant apps and limit access to regulated data.
+
+
+
+#### Microsoft Cloud App Security architecture
+
+Cloud App Security isn’t only about how you strengthen or harden your servers to detect and prevent cyberattacks. It requires consideration on the architecture of your entire estate. How each server connects to its neighbor, and the routes that network traffic takes can make a significant difference your security model. 
+
+Cloud App Security integrates visibility with your cloud by:
+
+- Using Cloud Discovery to map and identify your cloud environment and the cloud apps your organization uses. Cloud Discovery uses your traffic logs to dynamically discover and analyze the cloud apps being used.
+- Sanctioning and unsanctioning apps in your cloud. You can use Cloud App Security to sanction or unsanction apps in your organization by using the Cloud app catalog. It includes more than 16,000 cloud apps that are ranked and scored based on industry standards.
+- Using straightforward app connectors that use provider APIs for visibility and governance of apps you connect to. App connectors use APIs from cloud app providers to integrate their cloud apps with MCAS, extending control and protection. These connectors also give you access to information directly from cloud apps, for Cloud App Security analysis.
+- Using Conditional Access App Control protection to get real-time visibility and control over access and activities within your cloud apps.
+- Helping you have continuous control by setting and then continually fine-tuning policies. You can use policies to define users' behavior in the cloud. Use policies to detect risky behavior, violations, or suspicious data points and activities in your cloud environment.
+
+![Diagram showing how Cloud App Security acts as an intermediary, checking and verifying cloud apps usage.](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-threat-protection-with-microsoft-365-defender/media/6-cloud-app-security-intermediary.png)
+
+#### Office 365 Cloud App Security
+
+Office 365 Cloud App Security is a subset of Microsoft Cloud App Security that provides enhanced visibility and control for Office 365. Office 365 Cloud App Security includes threat detection based on user activity logs, discovery of Shadow IT for apps with similar functionality to Office 365 offerings, control app permissions to Office 365, and apply access and session controls.
+
+It offers a subset of the core MCAS features.
+
+#### Enhanced Cloud App Discovery in Azure Active Directory
+
+Azure Active Directory Premium P1 includes Azure Active Directory Cloud App Discovery at no extra cost. This feature is based on the Microsoft Cloud App Security Cloud Discovery capabilities that provide deeper visibility into cloud app usage in your organization.
+
+It provides a reduced subset of the MCAS discovery capabilities.
+
+Use Microsoft Cloud App Security to intelligently and proactively identify and respond to threats across your organization's Microsoft and non-Microsoft cloud services.
+
+#### Interactive guide
+
+In this interactive guide, you’ll get an introduction to the many services and capabilities available through the Cloud App Security portal, including Discover, Investigate, Control, and Alerts.
+
+To work through this guide, follow the prompts on the screen.
+
+[![Interactive guide](https://docs.microsoft.com/en-au/learn/wwl-sci/describe-threat-protection-with-microsoft-365-defender/media/6-interactive-guide-place-holder.png)](https://edxinteractivepage.blob.core.windows.net/edxpages/Security fundamentals/LP03M04 - Describe threat protection with Microsoft 365/index.html)
+
+
+
+
+
 ## Security management capabilities of Microsoft 365
+
+### Describe and explore the Microsoft 365 Security Centre
+
+[Describe and explore the Microsoft 365 security center - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-management-capabilities-of-microsoft-365/2-describe-explore-security-center)
+
+The Microsoft 365 security center is the new home for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure. Here you can view the security health of your organization, act to configure devices, users, and apps, and get alerts for suspicious activity. The Microsoft 365 security center helps security admins and security operations teams manage and protect their organization.
+
+The Microsoft 365 security center home page shows many of the common cards that security teams need. The composition of cards and data depends on the user role. Because the Microsoft 365 security center uses role-based access control, different roles will see cards that are more meaningful to their day-to-day jobs.
+
+The Microsoft 365 security center allows admins to tailor the navigation pane to meet daily operational needs. Admins can customize the navigation pane to show or hide functions and services based on their specific preferences. Customization is specific to the individual admin, so other admins won’t see these changes.
+
+ The Microsoft 365 security center navigation pane has these options:
+
+- **Home**: Get an at-a-glance view of the overall security health of your organization.
+- **Incidents**: See the broader story of an attack by connecting the dots seen on individual alerts on entities. You'll know exactly where an attack started, what devices are impacted, who was affected, and where the threat has gone.
+- **Alerts**: Have greater visibility into all the alerts across your Microsoft 365 environment. Includes alerts from Microsoft Cloud App Security, Microsoft Defender for Office 365, Azure Active Directory, Microsoft Defender for Identity, and Microsoft Defender for Endpoint. Available to E3 and E5 customers.
+- **Action center**: Reduce the volume of alerts your security team must address manually, allowing them to focus on more sophisticated threats and other high-value initiatives.
+- **Reports**: Get the detail and information you need to better protect your users, devices, apps, and more.
+- **Secure Score**: Improve your overall security posture with Microsoft Secure Score. This page provides an all up summary of the different security features and capabilities you've enabled, and includes recommendations for areas to improve.
+- **Advanced hunting**: Proactively search for malware, suspicious files, and activities in your Microsoft 365 organization.
+- **Classification**: Help protect data loss by adding labels to classify documents, email messages, sites, and more. When a label is applied (automatically or by the user), the content or site is protected based on the settings you choose. For example, you can create labels that encrypt files, add content marking, and control user access to specific sites.
+- **Policies**: Set up policies to manage devices, protect against threats, and receive alerts about various activities in your organization.
+- **Permissions**: Manage who, in your organization, has access to view content and perform tasks in the Microsoft 365 security center. You can also assign Microsoft 365 permissions in the Azure AD portal.
+
+```
+You must be assigned an appropriate role, such as Global Administrator, Security Administrator, Security Operator, or Security Reader in Azure Active Directory to access the Microsoft 365 security center.
+```
+
+The new Microsoft 365 security center is a specialized workspace designed to meet the needs of security and compliance teams. The Microsoft 365 security center provides actionable insights to help reduce risks and safeguard your digital estate.
+
+
+
+### Describe how to use Microsoft Secure Score
+
+
+
+
+
+
+
+### Explore security reports and dashboards
+
+
+
+
+
+
+
+
+
+### Describe incident capabilities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
