@@ -1,7 +1,6 @@
-# Describe the Concepts of Security, Compliance, and Identity (5-10%)
-
 [TOC]
 
+# Describe the Concepts of Security, Compliance, and Identity (5-10%)
 
 
 ## <u>Security Methodologies</u>
@@ -118,6 +117,7 @@ Additional material
 [Describe common threats - Learn | Microsoft Docs](https://docs.microsoft.com/en-au/learn/modules/describe-security-concepts-methodologies/5-describe-common-threats)
 
 - **Data breach**
+  
   - When some data is stolen, which involves personal data (data/information which can relate to identify an individual directly or indirectly)
 - **Dictionary attack**
   - Type of an identity attack where a hacker attempts to steal an identity by trying a large number of known passwords.

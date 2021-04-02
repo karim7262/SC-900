@@ -435,7 +435,7 @@ You should use extra features like Azure Active Directory multifactor authentica
 
 #### Global banned password list
 
-A global banned password list with known weak passwords is automatically updated and enforced by Microsoft. This list is maintained by the Azure AD Identity Protection team, who analyze security telemetry data to find weak or compromised passwords. Examples of passwords that might be blocked are P@$$w0rd or Passw0rd1 and all variations.
+A global banned password list with known weak passwords is automatically updated and enforced by Microsoft. This list is maintained by the Azure AD Identity Protection team, who analyse security telemetry data to find weak or compromised passwords. Examples of passwords that might be blocked are P@$$w0rd or Passw0rd1 and all variations.
 
 Variations are created using an algorithm that transposes text case and letters to numbers such as "1" to an "l". Variations on Password1 might include Passw0rd1, Pass0rd1, and others. These passwords are then checked and added to the global banned password list and made available to all Azure AD users. The global banned password list is automatically applied and can't be disabled.
 
